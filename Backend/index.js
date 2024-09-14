@@ -8,7 +8,13 @@ const app = express();
 
 connectDB();
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: ["https://sticray-user.vercel.app/"],
+    methods: ["GET", "POST", "DELETE", "PUT"],
+    credentials: true,
+    preflightContinue: true,
+    optionsSuccessStatus: 204 
+}));
 app.use('/api', router);
 app.use('/api', adminRoute);
 

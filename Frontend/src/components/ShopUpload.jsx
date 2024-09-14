@@ -6,7 +6,7 @@ const Shop = () => {
 
   const fetchProducts = async() => {
     try {
-      const response = await axios.get('http://localhost:5000/api/files');
+      const response = await axios.get('https://sticray-api.vercel.app/api/files');
       setProducts(response.data);
     } catch (error) {
       console.error("Failed to get data", error);

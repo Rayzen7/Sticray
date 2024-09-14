@@ -13,7 +13,7 @@ const UploadPage = () => {
   useEffect(() => {
     const fetchFiles = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/files');
+        const response = await fetch('https://sticray-api.vercel.app/api/files');
         const data = await response.json();
 
         if (response.ok) {
@@ -50,7 +50,7 @@ const UploadPage = () => {
     formData.append('file', file);
 
     try {
-      const response = await fetch('http://localhost:5000/api/upload', {
+      const response = await fetch('https://sticray-api.vercel.app/api/upload', {
         method: 'POST',
         body: formData,
       });
@@ -74,7 +74,7 @@ const UploadPage = () => {
 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/files/${id}`, {
+      const response = await fetch(`https://sticray-api.vercel.app/api/files/${id}`, {
         method: 'DELETE',
       });
 

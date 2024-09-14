@@ -14,7 +14,7 @@ const LoginPage = () => {
     setShowError(false);
 
     try {
-      const response = await fetch('http://localhost:5000/api/adminLogin', {
+      const response = await fetch('https://sticray-api.vercel.app/api/adminLogin', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ user: name, password })
