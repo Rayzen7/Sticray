@@ -22,6 +22,7 @@ const Product = () => {
   };
 
   useEffect(() => {
+    console.log(id);
     fetchProduct();
   }, [id]);
 
