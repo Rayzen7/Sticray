@@ -101,7 +101,7 @@ const Product = () => {
       </div>
       <div className='flex flex-col mt-16 gap-4'>
         <button className='text-white bg-orange h-[45px] text-[17px]' onClick={handleBuy}>Buy</button>
-        <Link to='/'><button className='text-white lg:w-[660px] w-[320px] bg-orange h-[45px] text-[17px]'>Back</button></Link>
+        <Link to='/'><button className='text-white lg:w-[660px] w-[100%] bg-orange h-[45px] text-[17px]'>Back</button></Link>
       </div>
     </div>
   );
