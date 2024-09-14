@@ -13,7 +13,7 @@ const Product = () => {
 
   const fetchProduct = async () => {
     try {
-      const response = await axios.get(`https://sticray-api.vercel.app/api/files${id}`);
+      const response = await axios.get(`https://sticray-api.vercel.app/api/files/${id}`);
       setProduct(response.data);
     } catch (error) {
       setError('Failed to fetch product details');
